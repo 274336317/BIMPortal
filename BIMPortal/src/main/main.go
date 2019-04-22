@@ -17,8 +17,9 @@ func IndexHandler(w http.ResponseWriter, r *http.Request){
 }
 
 func main() {
-    http.Handle("/css/", http.FileServer(http.Dir("resources/bootstrap-4.3.1")))
-    http.Handle("/js/", http.FileServer(http.Dir("resources/bootstrap-4.3.1")))
+    http.Handle("/bootstrap-4.3.1/css/", http.FileServer(http.Dir("resources/bootstrap-4.3.1")))
+    http.Handle("/bootstrap-4.3.1/js/", http.FileServer(http.Dir("resources/bootstrap-4.3.1")))
+    http.Handle("/jquery-3.3.1/js/", http.FileServer(http.Dir("resources/jquery-3.3.1")))
 
     http.HandleFunc("/",IndexHandler)
     http.ListenAndServe(":8181", nil)
