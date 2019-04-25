@@ -46,7 +46,7 @@ func GetCurrentPath() (string, error) {
 
 func IndexHandler(w http.ResponseWriter, r *http.Request){
 
-    t, err := template.ParseFiles("resources/html/index.html")
+    t, err := template.ParseFiles("pages/index.html")
     if (err != nil) {
         log.Println(err)
     }
@@ -63,7 +63,11 @@ func main() {
 	fmt.Printf("Parent Path: %s\n", parentPath)	
 	
     http.Handle("/bootstrap-4.3.1/", http.StripPrefix("/bootstrap-4.3.1/", http.FileServer(http.Dir(parentPath + "/resources/bootstrap-4.3.1"))))
-    http.Handle("/jquery-3.3.1/js/", http.StripPrefix("/jquery-3.3.1/js/", http.FileServer(http.Dir(parentPath + "/resources/jquery-3.3.1"))))
+    http.Handle("/jquery-3.3.1/", http.StripPrefix("/jquery-3.3.1/", http.FileServer(http.Dir(parentPath + "/resources/jquery-3.3.1"))))
+    http.Handle("/echarts/", http.StripPrefix("/echarts/", http.FileServer(http.Dir(parentPath + "/resources/echarts"))))
+    http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir(parentPath + "/resources/css"))))
+    http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir(parentPath + "/resources/js"))))
+    http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir(parentPath + "/resources/images"))))
 
     http.HandleFunc("/",IndexHandler)
     http.ListenAndServe(":8181", nil)
