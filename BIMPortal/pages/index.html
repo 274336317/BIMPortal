@@ -17,7 +17,7 @@
     <div class="container-flex" tabindex="0" hidefocus="true">
         <div class="box-left">
             
-            <div class="left-center" style="height:25%">
+            <div class="left-top" style="height:25%">
                 <div class="title-box">
                     <h6>设备监控数据</h6>
                 </div>
@@ -113,7 +113,7 @@
                 
             </div>
             
-            <div class="left-center" style="height:60%">
+            <div class="left-bottom" style="height:53%">
                 <div class="title-box">
                     <h6>能耗管理</h6>
                 </div>
@@ -199,8 +199,8 @@
             <div class="right-bottom">
                 <div class="data-box">
                     <div class="settings-box">
-                   	    <p><img src="images/people_iocn.png" alt="">负&nbsp;责&nbsp;人：<span id="lea_a">张晓明</span></p>
-                        <p><img src="images/teacher_icon.png" alt="">今日值班：<span id="name_a">刘晓燕&nbsp;李长青&nbsp;万小强</span><span id="date_a"></span></p>
+                   	    <p><img src="images/people_iocn.png" alt="">负&nbsp;责&nbsp;&nbsp;人：<span id="lea_a">张晓明 (138xxxxxxxx)</span></p>
+                        <p><img src="images/teacher_icon.png" alt="">今日值班：<span id="name_a">刘晓燕&nbsp;&nbsp;李长青&nbsp;&nbsp;万小强</span><span id="date_a"></span></p>
                         
                     </div>
                 </div>
@@ -598,7 +598,7 @@
 
         energy_curve_option = {
                 title: {
-                    text: '电',
+                    text: '电-19170度',
 
         	        textStyle: {
         	        	fontWeight: 'normal',
@@ -625,7 +625,6 @@
         	        type: 'category',
 	       	          axisLine: {
 	       	              lineStyle: {
-	       	                // 设置x轴颜色
 	       	                color:'white'
 	       	              }
 	       	            },
@@ -634,14 +633,13 @@
         	    },
         	    yAxis: {
         	        type: 'value',
-        	        max:1000,
+        	        max:4000,
                     splitLine: {
                         show: false
                     },
 	       	          axisLine: {
 	       	              lineStyle: {
-	       	                // 设置x轴颜色
-	       	                color:'white'
+	       	                color:'white',
 	       	              }
 	       	            },
         	    },
@@ -649,14 +647,12 @@
         	        {
         	            name:'一号楼',
         	            type:'line',
-        	            stack: '总量',
-        	            data:[120, 132, 101, 134, 90, 230, 210],
+        	            data:[1200, 1320, 1010, 1340, 1850, 1900, 2100],
         	            smooth: true,
                         itemStyle : {
                             normal : {
                                 lineStyle:{
-                                    width:2,//折线宽度
-                                    color:"#0e94eb"//折线颜色
+                                    width:2,
                                 }
                             }
                         },
@@ -664,14 +660,12 @@
         	        {
         	            name:'二号楼',
         	            type:'line',
-        	            stack: '总量',
-        	            data:[220, 182, 191, 234, 290, 330, 310],
+        	            data:[1000, 1820, 1910, 2340, 2900, 3300, 3100],
         	            smooth: true,
                         itemStyle : {
                             normal : {
                                 lineStyle:{
-                                    width:2,//折线宽度
-                                    color:"#c440ef"//折线颜色
+                                    width:2,
                                 }
                             }
                         },
@@ -679,14 +673,12 @@
         	        {
         	            name:'三号楼',
         	            type:'line',
-        	            stack: '总量',
-        	            data:[150, 232, 201, 154, 190, 330, 410],
+        	            data:[1500, 2320, 2010, 1540, 1900, 2300, 3300],
         	            smooth: true,
                         itemStyle : {
                             normal : {
                                 lineStyle:{
-                                    width:2,//折线宽度
-                                    color:"#efb013"//折线颜色
+                                    width:2,
                                 }
                             }
                         },
@@ -702,7 +694,7 @@
 
         water_curve_option = {
                 title: {
-                    text: '水',
+                    text: '水-917吨',
         	        textStyle: {
         	        	fontWeight: 'normal',
         	        	color: '#ffffff'
@@ -737,7 +729,7 @@
         	    },
         	    yAxis: {
         	        type: 'value',
-        	        max:1000,
+        	        max:400,
                     splitLine: {
                         show: false
                     },
@@ -752,7 +744,6 @@
         	        {
         	            name:'一号楼',
         	            type:'line',
-        	            stack: '总量',
         	            data:[120, 132, 101, 134, 90, 230, 210],
         	            smooth: true,
                         itemStyle : {
@@ -767,7 +758,6 @@
         	        {
         	            name:'二号楼',
         	            type:'line',
-        	            stack: '总量',
         	            data:[220, 182, 191, 234, 290, 330, 310],
         	            smooth: true,
                         itemStyle : {
@@ -782,7 +772,6 @@
         	        {
         	            name:'三号楼',
         	            type:'line',
-        	            stack: '总量',
         	            data:[150, 232, 201, 154, 190, 330, 410],
         	            smooth: true,
                         itemStyle : {
@@ -805,7 +794,7 @@
 
         photovoltaics_chart_option = {
                 title: {
-                    text: '智能光伏.发电总量',
+                    text: '智能光伏.发电总量  1129683 kw.h',
         	        textStyle: {
         	        	fontWeight: 'normal',
         	        	color: '#ffffff'
@@ -849,7 +838,7 @@
         	            name:'发电量',
         	            type:'line',
         	            areaStyle: {color:"#0e94eb"},
-        	            stack: '总量',
+
         	            data:[1200, 1320, 1010, 1340, 900, 2300, 2100],
         	            smooth: true,
                         itemStyle : {
