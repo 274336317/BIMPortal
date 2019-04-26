@@ -125,97 +125,49 @@
         </div>
         <div class="box-center">
             <div class="center-top">
-                <h1>XX智慧园区-数据大屏</h1>
+                <h1>XX园区数据大屏</h1>
             </div>
             <div class="center-center">
-                <div class="weather-box">
-                    <div class="data">
-                        <p class="time" id="time">00:00:00</p>
-                        <p id="date"></p>
-                    </div>
-                    <div class="weather">
-                        <img id="weatherImg" src="images/weather/weather_img01.png" alt="">
-                        <div id="weather">
-                            <p class="active">多云</p>
-                            <p>16-22℃</p>
-                            <p>深圳市南山区</p>
-                        </div>
-                    </div>
-                </div>
-                <img src="images/line_bg.png" alt="">
-                <div class="select-box">
-                    <ul id="barType">
-                        <li class="active" data-value="1">派件</li>
-                        <li data-value="2">寄件</li>
-                    </ul>
-                    <div data-type="2">
-                        <div class="select" tabindex="0" hidefocus="true">
-                            <div class="select-div">
-                                公司
-                            </div>
-                            <ul class="select-ul company">
-                                <li class="active" data-value="">公司</li>
-                                <li data-value="1">顺丰</li>
-                                <li data-value="2">京东</li>
-                                <li data-value="2">EMS</li>
-                            </ul>
-                        </div>
-                        <div class="select" tabindex="0" hidefocus="true">
-                            <div class="select-div">
-                                快件类型
-                            </div>
-                            <ul class="select-ul">
-                                <li class="active" data-value="">快件类型</li>
-                                <li data-value="0">文件</li>
-                                <li data-value="1">物品</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="center-bottom">
-                <div class="chart-box">
-                    <div id="chart4" style="width:100%;height:95%;"></div>
-                </div>
-                <div class="city-data">
-                    <div class="city-box">
-                        <p id="titleQ"><span>全网</span>到珠海</p>
-                        <ul class="city-btn" data-city="1">
-                            <li class="active">全网</li>
-                            <li>ABCDE</li>
-                            <li>FGHIJ</li>
-                            <li>KLMNO</li>
-                            <li>PQRST</li>
-                            <li>UVWXYZ</li>
-                        </ul>
-                        <ul class="city-div" id="city">
+	            <div class="health-top">
+	                <div class="current-num">
+	                    <div class="health-title">园区健康状况</div>
+		                <div class="exception-tips">正常</div>
+		                
+		                <div class="exception-list">
+		                	<p>一号楼 308室 照明异常</p>
+		                	<p>一号楼 2号客运电梯 故障</p>
+		                	<p>一号楼 1号门门禁 故障</p>
+		                </div>
+		                
+		                <div class="exception-list-tatus">
+		                	<p style="color:green;">已派单</p>
+		                	<p style="color:white;">未派单</p>
+		                	<p style="color:green;">已派单</p>
+		                </div>
+		                
+		                <div class="exception-list">
+		                	<p>二号楼  1号货运电梯 故障</p>
+		                	<p>地下车库 2号闸门  故障</p>
+		                	<p>三号楼 一号门门禁 故障</p>
+		                </div>
+		                <div class="exception-list-tatus">
+		                	<p style="color:green;">已派单</p>
+		                	<p style="color:green;">已派单</p>
+		                	<p style="color:green;">已派单</p>
+		                </div>
+	                </div>
 
-                        </ul>
-                    </div>
-                    <ul class="ranking-box">
-                        <li><span></span>
-                            <p>城市</p>
-                            <p>派件</p>
-                        </li>
-                        <!--                        <li><span>1</span><p>上海</p><p>1sss25(万件)</p></li>-->
-                    </ul>
-                    <div class="enlarge-box">
-                        <button class="enlarge-btn" id="fangda"></button>
-                        <ul class="modal-btn">
-                            <li>
-                                <div></div>1</li>
-                            <li>
-                                <div></div>2</li>
-                            <li>
-                                <div></div>3</li>
-                            <li>
-                                <div></div>4</li>
-                            <li>
-                                <div></div>5</li>
-                            <li>
-                                <div></div>6</li>
-                        </ul>
-                    </div>
+	            </div>
+           
+            </div>
+            
+            <div class="zone_image">
+            	<img src="../images/timg.jpg"/>
+            </div>
+            
+            <div class="photovoltaics_chart_div">
+                <div id="photovoltaics_chart" style="width:100%;height:100%;color:white;margin-top:15px;">
+                    
                 </div>
             </div>
 
@@ -223,108 +175,33 @@
         <div class="box-right">
             <div class="right-top">
                 <div class="title-box">
-                    <h6 id="barTitle">派件数据</h6>
-                    <img class="line-img" src="images/line-blue.png" alt="">
-                    <button data-state=1 id="tabBtn"><img src="images/chart_icon.png" alt=""><span>图表</span></button>
+                    <h6 id="barTitle">故障数据</h6>
                 </div>
-                <p class="unit">单位：件</p>
-                <div class="chart-box">
-                    <div id="chart3" style="width:100%;height:100%;"></div>
+                
+            <div class="fault_chart_div">
+                <div id="fault_chart" style="width:100%;height:100%;color:white;margin-top:15px;">
+                    
                 </div>
-                <div class="data-box" style="display:none;">
-                    <table class="table1">
-                        <tr>
-                            <td>入库件</td>
-                            <td colspan="3" class="table-data dph-data1">0</td>
-                        </tr>
-                        <tr class="bg-color">
-                            <td rowspan="2">在库件</td>
-                            <td rowspan="2" class="table-data dph-data2">0</td>
-                            <td>正常件</td>
-                            <td class="table-data dph-data3">0</td>
-                        </tr>
-                        <tr class="bg-color">
-                            <td>滞留件</td>
-                            <td class="table-data dph-data5">0</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">出库件</td>
-                            <td rowspan="2" class="dph-data6">0</td>
-                            <td>派送件</td>
-                            <td class="table-data dph-data7">0</td>
-                        </tr>
-                        <tr>
-                            <td>自提件</td>
-                            <td class="table-data dph-data8">0</td>
-                        </tr>
-                        <tr class="bg-color">
-                            <td>退签件</td>
-                            <td colspan="3" class="table-data dph-data9">0</td>
-                        </tr>
-                        <tr>
-                            <td>丢失件</td>
-                            <td colspan="3" class="table-data dph-data4">0</td>
-                        </tr>
-                    </table>
-                    <table class="table1" style="display:none;">
-                        <tr>
-                            <td>入库件</td>
-                            <td colspan="3" class="table-data mail-data1">1</td>
-                        </tr>
-                        <tr class="bg-color">
-                            <td rowspan="2">在库件</td>
-                            <td rowspan="2" class="table-data mail-data2">1</td>
-                            <td>正常件</td>
-                            <td class="table-data mail-data7">1</td>
-                        </tr>
-                        <tr class="bg-color">
-                            <td>滞留件</td>
-                            <td class="table-data mail-data4">1</td>
-                        </tr>
-
-                        <tr>
-                            <td>出库件</td>
-                            <td colspan="3" class="mail-data6">1</td>
-                        </tr>
-                        <tr class="bg-color">
-                            <td>丢失件</td>
-                            <td colspan="3" class="mail-data3">1</td>
-                        </tr>
-                        <tr>
-                            <td>撤销件</td>
-                            <td colspan="3" class="table-data mail-data5">1</td>
-                        </tr>
-                    </table>
-                </div>
+            </div>
+                
             </div>
             <div class="right-center">
                 <div class="title-box">
-                    <p id="switchBtn"><span class="active" data-dataType="income">收入数据</span><img class="line-img" src="images/line-blue.png" alt=""><span data-dataType="expend">支出数据</span></p>
-                    <img class="line-img" src="images/line-blue.png" alt="">
-                    <button id="dateBtn"><img src="images/data_icon.png" alt="">日期</button>
+                    <p id="switchBtn"><span class="active" data-dataType="income">人员数据</span></p>
                 </div>
-                <div class="data-box">
-                    <p class="data-number" id="totalProfit">123,456.5元</p>
-                    <div class="time-box" id="timeBox">
-                        <div class="time-div">
-                            <input class="time-input" type="text" value="" id="startTime">
-                            <img src="images/selsct_time.png" alt="">
-                        </div>
-                        <div class="time-div end">
-                            <input class="time-input" type="text" value="" id="endTime">
-                            <img src="images/selsct_time.png" alt="">
-                        </div>
-                    </div>
-                </div>
+	            <div class="people_chart_div">
+	                <div id="people_chart" style="width:100%;height:100%;color:white;margin-top:15px;">
+	                    
+	                </div>
+	            </div>
+               
             </div>
             <div class="right-bottom">
-                <div class="title-box">
-                    <button id="setBtn"><img src="images/settings_icon.png" alt="">设置</button>
-                </div>
                 <div class="data-box">
                     <div class="settings-box">
-                        <p><img src="images/teacher_icon.png" alt="">今日值班：<span id="name_a"></span><span id="date_a"></span></p>
-                        <p><img src="images/people_iocn.png" alt="">负责人：<span id="lea_a"></span></p>
+                   	    <p><img src="images/people_iocn.png" alt="">负&nbsp;责&nbsp;人：<span id="lea_a">张晓明</span></p>
+                        <p><img src="images/teacher_icon.png" alt="">今日值班：<span id="name_a">刘晓燕&nbsp;李长青&nbsp;万小强</span><span id="date_a"></span></p>
+                        
                     </div>
                 </div>
             </div>
@@ -922,7 +799,223 @@
 
         
         water_curve.setOption(water_curve_option);
+        
+        
+        var photovoltaics_chart = echarts.init(document.getElementById('photovoltaics_chart'));
 
+        photovoltaics_chart_option = {
+                title: {
+                    text: '智能光伏.发电总量',
+        	        textStyle: {
+        	        	fontWeight: 'normal',
+        	        	color: '#ffffff'
+        	      	},
+                },
+        	    tooltip: {
+        	        trigger: 'axis'
+        	    },
+        	    grid: {
+        	        left: '3%',
+        	        right: '4%',
+        	        bottom: '3%',
+        	        containLabel: true
+        	    },
+        	    xAxis: {
+        	        type: 'category',
+	       	          axisLine: {
+	       	              lineStyle: {
+	       	                // 设置x轴颜色
+	       	                color:'white'
+	       	              }
+	       	            },
+        	        boundaryGap: false,
+        	        data: ['22/4','23/4','24/4','25/4','26/4','27/4','28/4']
+        	    },
+        	    yAxis: {
+        	        type: 'value',
+        	        max:2500,
+                    splitLine: {
+                        show: false
+                    },
+	       	          axisLine: {
+	       	              lineStyle: {
+	       	                // 设置x轴颜色
+	       	                color:'white'
+	       	              }
+	       	            },
+        	    },
+        	    series: [
+        	        {
+        	            name:'发电量',
+        	            type:'line',
+        	            areaStyle: {color:"#0e94eb"},
+        	            stack: '总量',
+        	            data:[1200, 1320, 1010, 1340, 900, 2300, 2100],
+        	            smooth: true,
+                        itemStyle : {
+                            normal : {
+                                lineStyle:{
+                                    width:2,//折线宽度
+                                    color:"#0e94eb"//折线颜色
+                                }
+                            }
+                        },
+        	        }
+        	    ]
+        	};
+
+        
+        photovoltaics_chart.setOption(photovoltaics_chart_option);
+        
+        
+        var fault_chart = echarts.init(document.getElementById('fault_chart'));
+        
+        fault_option = {
+
+        	    title: {
+        	        text: '故障分布',
+        	        left: 'center',
+        	        top: 20,
+        	        textStyle: {
+        	            color: '#ffffff'
+        	        }
+        	    },
+
+        	    tooltip : {
+        	        trigger: 'item',
+        	        formatter: "{a} <br/>{b} : {c} ({d}%)"
+        	    },
+
+        	    visualMap: {
+        	        show: false,
+        	        min: 80,
+        	        max: 600,
+        	        inRange: {
+        	            colorLightness: [0, 1]
+        	        }
+        	    },
+        	    series : [
+        	        {
+        	            name:'故障统计',
+        	            type:'pie',
+        	            radius : '55%',
+        	            center: ['50%', '50%'],
+        	            data:[
+        	                {value:335, name:'照明故障'},
+        	                {value:310, name:'电梯故障'},
+        	                {value:274, name:'门禁故障'},
+        	                {value:235, name:'闸门故障'},
+        	                {value:400, name:'空调故障'}
+        	            ].sort(function (a, b) { return a.value - b.value; }),
+        	            roseType: 'radius',
+        	            label: {
+        	                normal: {
+        	                    textStyle: {
+        	                        color: 'rgba(255, 255, 255, 0.9)'
+        	                    }
+        	                }
+        	            },
+        	            labelLine: {
+        	                normal: {
+        	                    lineStyle: {
+        	                        color: 'rgba(255, 255, 255, 0.3)'
+        	                    },
+        	                    smooth: 0.2,
+        	                    length: 10,
+        	                    length2: 20
+        	                }
+        	            },
+        	            itemStyle: {
+        	                normal: {
+        	                    color: '#c23531',
+        	                    shadowBlur: 200,
+        	                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+        	                }
+        	            },
+
+        	            animationType: 'scale',
+        	            animationEasing: 'elasticOut',
+        	            animationDelay: function (idx) {
+        	                return Math.random() * 200;
+        	            }
+        	        }
+        	    ]
+        	};
+        
+        fault_chart.setOption(fault_option);
+        
+        var people_chart = echarts.init(document.getElementById('people_chart'));
+        
+        people_option = {
+
+        	    title: {
+        	        text: '入园人数:845人',
+        	        left: 'center',
+        	        top: 20,
+        	        textStyle: {
+        	            color: '#ffffff'
+        	        }
+        	    },
+
+        	    tooltip : {
+        	        trigger: 'item',
+        	        formatter: "{a} <br/>{b} : {c} ({d}%)"
+        	    },
+
+        	    visualMap: {
+        	        show: false,
+        	        min: 80,
+        	        max: 600,
+        	        inRange: {
+        	            colorLightness: [0, 1]
+        	        }
+        	    },
+        	    series : [
+        	        {
+        	            name:'人员统计',
+        	            type:'pie',
+        	            radius : '55%',
+        	            center: ['40%', '50%'],
+        	            data:[
+        	                {value:535, name:'园区员工'},
+        	                {value:310, name:'外来人员'},
+        	                {value:74, name:'缺勤人员'}
+        	            ],
+        	            label: {
+        	                normal: {
+        	                    textStyle: {
+        	                        color: 'rgba(255, 255, 255, 0.9)'
+        	                    }
+        	                }
+        	            },
+        	            labelLine: {
+        	                normal: {
+        	                    lineStyle: {
+        	                        color: 'rgba(255, 255, 255, 0.9)'
+        	                    },
+        	                    smooth: 0.2,
+        	                    length: 10,
+        	                    length2: 20
+        	                }
+        	            },
+        	            itemStyle: {
+        	                normal: {
+        	                    color: '#c23531',
+        	                    shadowBlur: 200,
+        	                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+        	                }
+        	            },
+
+        	            animationType: 'scale',
+        	            animationEasing: 'elasticOut',
+        	            animationDelay: function (idx) {
+        	                return Math.random() * 200;
+        	            }
+        	        }
+        	    ]
+        	};
+        
+        people_chart.setOption(people_option);
         
     });
     
